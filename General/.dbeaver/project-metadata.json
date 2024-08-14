@@ -1,0 +1,1 @@
+{"resources":{"Scripts/00_사용자계정생성.sql":{"default-datasource":"oracle_thin-1914e74a7a7-7a947c5e9627234c","default-schema":"SYS"},"Scripts/01_SELECT.sql":{"default-datasource":"oracle_thin-1914e876726-4d2dfad716cef26a","default-schema":"KH_LNS"}}}
