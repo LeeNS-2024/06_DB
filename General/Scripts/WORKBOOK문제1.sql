@@ -1,0 +1,18 @@
+-- SQL01_SELECT(BASIC)
+
+
+-- 1번
+SELECT 
+	DEPARTMENT_NAME "학과 명",
+	CATEGORY 계열
+FROM 
+	TB_DEPARTMENT;
+	
+
+-- 2번
+SELECT 
+	DEPARTMENT_NAME || '의 정원은 ' || CAPACITY  || '명 입니다.' "학과별 정원"
+FROM TB_DEPARTMENT;
+
+
+-- 3번
