@@ -105,17 +105,12 @@ WHERE PROFESSOR_NAME NOT LIKE '___'; -- NOT LIKE!!!
 
 -- 3번
 -- 남자 교수들의 이름과 나이를 나이 오름차순으로 조회
--- 단, 교수 중 00년생 이후 출생자 X, 출력 헤더는 교수이름으로 하고, 나이는 '만'으로 계산
-SELECT PROFESSOR_NAME 교수이름, 나이
+-- 단, 교수 중 00년생 이후 출생자 X, 출력 헤더는 교수이름으로 하고, 나이는 '만'으로 계산					
+SELECT PROFESSOR_NAME 교수이름,
+   FLOOR(MONTHS_BETWEEN(SYSDATE, TO_DATE(SUBSTR(PROFESSOR_SSN, 1, 6),'RRMMDD')) /12) 나이
 FROM TB_PROFESSOR
 WHERE SUBSTR(PROFESSOR_SSN, 8, 1) = '1'
-			AND
-			( TO_DATE(CURRENT_DATE, YY-MM-DD) - TO_DATE( SUBSTR(PROFESSOR_SSN, 1, 6), YY-MM-DD ) )
-			AS 나이
-ORDER BY 나이 DESC;
-										
-										
-										
+ORDER BY 나이;
 										
 										
 										
