@@ -9,10 +9,10 @@ FROM
 	TB_DEPARTMENT;
 	
 
--- 2번
+-- 2번 -- 오답노트
 SELECT 
 	DEPARTMENT_NAME || '의 정원은 ' || CAPACITY  || '명 입니다.' "학과별 정원"
-FROM TB_DEPARTMENT;
+FROM TB_DEPARTMENT; -- || 로 출력값에 글자를 넣을 수 있네
 
 
 -- 3번	"국어국문학과"에 다니는 여학생 중 현재 휴학중인 여학생을 조회하시오.
@@ -40,7 +40,6 @@ WHERE STUDENT_NO IN('A513079',
 										
 -- 5번
 -- 입학 정원이 20명 이상 30명 이하인 학과들의 학과 이름과 계열 조회
-										
 SELECT DEPARTMENT_NAME, CATEGORY
 FROM TB_DEPARTMENT
 WHERE CAPACITY >= 20 AND CAPACITY <= 30;
@@ -65,7 +64,7 @@ WHERE PREATTENDING_CLASS_NO IS NOT NULL;
 
 
 										
--- 8번
+-- 8번 -- 오답노트
 -- 춘대학에는 어떤 계열들이 있는지 조회
 SELECT CATEGORY
 FROM TB_DEPARTMENT
@@ -95,7 +94,7 @@ WHERE DEPARTMENT_NO = 002
 ORDER BY ENTRANCE_DATE ASC;
 
 
--- 2번
+-- 2번 -- 오답노트
 -- 교수 중 이름이 세 글자가 아닌 교수 두 명의
 -- 이름과 주민번호를 조회
 SELECT PROFESSOR_NAME, PROFESSOR_SSN
@@ -103,7 +102,7 @@ FROM TB_PROFESSOR
 WHERE PROFESSOR_NAME NOT LIKE '___'; -- NOT LIKE!!!
 										
 
--- 3번
+-- 3번 -- 오답노트
 -- 남자 교수들의 이름과 나이를 나이 오름차순으로 조회
 -- 단, 교수 중 00년생 이후 출생자 X, 출력 헤더는 교수이름으로 하고, 나이는 '만'으로 계산					
 SELECT PROFESSOR_NAME 교수이름,
@@ -113,8 +112,12 @@ WHERE SUBSTR(PROFESSOR_SSN, 8, 1) = '1'
 ORDER BY 나이;
 										
 										
-										
-										
+-- 4번  -- ING
+-- 교수들의 이름 중 성을 제외한 이름만 조회. 출력헤더는 "이름"이 나오도록한다
+-- (성 2자인 교수는 없다고 가정)
+SELECT PROFESSOR_NAME 이름									
+FROM TB_PROFESSOR
+WHERE SUBSTR(PROFESSOR_NAME, 2, 2);
 										
 										
 										
