@@ -408,8 +408,7 @@ VALUES(NULL, 'user01', 'pass01', '신사임당', '여', '010-9999-9999', 'sin123
 -- 제공되는 값 외에는 NULL을 사용할 수 있음
 
 -- 컬럼레벨일 경우
--- 컬럼명 자료형(크기) [CONSTRAINT 이름] 
--- REFERENCES 참조할 테이블명 [(참조할컬럼)] [삭제룰]
+-- 컬럼명 자료형(크기) [CONSTRAINT 이름] REFERENCES 참조할 테이블명 [(참조할컬럼)] [삭제룰]
 
 -- 테이블레벨일 경우
 -- [CONSTRAINT 이름] FOREIGN KEY (적용할컬럼명) 
