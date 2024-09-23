@@ -121,7 +121,8 @@ COMMIT;
 
 
 
-
+UPDATE "MEMBER"
+SET	MEMBER_DEL_FL = 'N';
 
 
 
