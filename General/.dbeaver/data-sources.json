@@ -97,7 +97,14 @@
 					"@dbeaver-sid-service@": "SERVICE"
 				},
 				"auth-model": "oracle_native"
-			}
+			},
+			"filters": [
+				{
+					"type": "org.jkiss.dbeaver.ext.oracle.model.OracleSchema",
+					"enabled": true,
+					"include": ["TEST_USER"]
+				}
+			]
 		},
 		"oracle_thin-191de7a624a-ce5b4edaafe15d1": {
 			"provider": "oracle",
@@ -152,6 +159,34 @@
 					"type": "org.jkiss.dbeaver.ext.oracle.model.OracleSchema",
 					"enabled": true,
 					"include": ["DAEMOIM"]
+				}
+			]
+		},
+		"oracle_thin-1932d2dd6dc-514a18fa4d577eb4": {
+			"provider": "oracle",
+			"driver": "oracle_thin",
+			"name": "khj-1.xyz(CODEGRAM,GRAM1234)",
+			"save-password": true,
+			"configuration": {
+				"host": "khj-1.xyz",
+				"port": "10000",
+				"database": "XE",
+				"url": "jdbc:oracle:thin:@//khj-1.xyz:10000/XE",
+				"configurationType": "MANUAL",
+				"home": "C:\\app\\user1\\product\\18.0.0\\dbhomeXE",
+				"type": "dev",
+				"closeIdleConnection": true,
+				"provider-properties": {
+					"@dbeaver-connection-type@": "BASIC",
+					"@dbeaver-sid-service@": "SERVICE"
+				},
+				"auth-model": "oracle_native"
+			},
+			"filters": [
+				{
+					"type": "org.jkiss.dbeaver.ext.oracle.model.OracleSchema",
+					"enabled": true,
+					"include": ["CODEGRAM"]
 				}
 			]
 		}
